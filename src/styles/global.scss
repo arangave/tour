@@ -13,6 +13,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f5f5f5; /* Manteniendo el fondo claro */
+  overflow-x: hidden;
 }
 
 p {
@@ -187,6 +188,7 @@ body {
 
 /* Estilos para la página de registro */
 .register-page {
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -231,10 +233,10 @@ body {
 
 /* Estilo para los inputs y botones */
 .register-form input {
-  padding: 10px;
-  width: 100%; /* Hacemos los inputs de ancho completo */
-  margin: 10px 0;
-  border: 1px solid gray;
+  padding: 8px;
+  width: 80%; /* Hacemos los inputs de ancho completo */
+  margin: 8px 0;
+  border: 1px solid rgb(19, 100, 10);
   border-radius: 5px;
 }
 

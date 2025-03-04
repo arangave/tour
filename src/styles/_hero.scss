@@ -1,0 +1,11 @@
+@use "./variables" as *; // ✅ Importar variables para que estén disponibles
+
+.hero {
+  background-image: url('/imagenes/hero-bg.jpg');
+  background-size: cover;
+  text-align: center;
+  padding: 100px 20px;
+  color: $text-color; // Ahora sí funcionará
+}
+
+  

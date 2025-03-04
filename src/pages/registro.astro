@@ -1,0 +1,35 @@
+---
+// Importar el Layout
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="register-page">
+    <!-- Contenedor para imagen y formulario -->
+    <div class="register-content">
+      <!-- Imagen a la izquierda -->
+      <img src="/imagenes/viejaro.jpg" alt="Imagen de registro" class="register-image" />
+      
+      <!-- Formulario a la derecha -->
+      <div class="register-form">
+        <h2>Regístrate para unirte a nuestras aventuras</h2>
+        <p>Completa el formulario y empieza a explorar el mundo con nosotros.</p>
+        
+        <form>
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" placeholder="Tu nombre" required />
+
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" placeholder="tucorreo@ejemplo.com" required />
+
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" placeholder="Crea una contraseña" required />
+
+          <button type="submit">Registrarse</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+

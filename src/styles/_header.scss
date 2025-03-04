@@ -1,0 +1,33 @@
+@use "./variables" as *; // ✅ Importar variables para que estén disponibles
+
+.header {
+  background: $primary-color;
+  color: $text-color;
+  padding: 15px 0;
+  text-align: center;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    
+    li {
+      margin: 0 15px;
+      
+      a {
+        color: $text-color;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+  

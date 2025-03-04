@@ -1,0 +1,407 @@
+@use "./variables";  // ✅ DEBE ESTAR PRIMERO
+@use "./mixins";
+@use "./animations";
+@use "./buttons";
+@use "./header";
+@use "./footer";
+@use "./hero";
+@use "./tour";
+
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Manteniendo el fondo claro */
+}
+
+p {
+  color: rgb(8, 8, 8);
+}
+
+/* Menú fijo sin transparencia */
+.header {
+  background-color: #000000; /* Color negro */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-right: 90px;
+}
+
+/* Lista de navegación */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Aumentamos la separación entre los elementos */
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  display: inline-block;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+/* Asegurar que el contenido no quede oculto debajo del menú */
+body {
+  padding-top: 80px; /* Ajusta esto si el menú es más grande */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7); /* Blanco semitransparente */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1; /* Imagen detrás del texto */
+  opacity: 0.7; /* Hace que la imagen sea un poco transparente */
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1c3926;  /* Verde para el título */
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #1c3926; 
+  text-decoration: none;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #1c3926; 
+  color: white;
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #1c3926;
+  padding: 20px;
+  color: white;
+  position: relative;
+}
+.stats::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background-color: white; /* Línea blanca separadora */
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-box h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Tours Section */
+.tours {
+  padding: 60px;
+  text-align: center;
+}
+
+.tour-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Testimonial Section */
+.testimonial {
+  background-color: #1c3926;   /* Azul más claro */
+  color: rgb(255, 255, 255);
+  padding: 40px;
+  text-align: center;
+}
+
+.testimonial blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* Estilos para la página de registro */
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100vh;  /* Asegura que se cubra toda la altura de la pantalla */
+}
+
+/* Contenedor principal para la imagen y el formulario */
+.register-content {
+  display: flex;
+  align-items: center; /* Centrado vertical de los elementos */
+  justify-content: center; /* Centrado horizontal */
+  width: 100%;
+}
+
+/* Imagen a la izquierda */
+.register-image {
+  width: 50%; /* Toma la mitad del espacio disponible */
+  object-fit: cover; /* Ajusta la imagen para que se recorte sin perder la proporción */
+  border-radius: 10px;
+  margin-right: 30px; /* Añadimos margen entre la imagen y el formulario */
+}
+
+/* Formulario a la derecha */
+.register-form {
+  width: 45%; /* Definimos el ancho para el formulario */
+  padding: 20px;
+}
+
+.register-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.register-form p {
+  margin-bottom: 20px;
+}
+
+/* Estilo para los inputs y botones */
+.register-form input {
+  padding: 10px;
+  width: 100%; /* Hacemos los inputs de ancho completo */
+  margin: 10px 0;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.register-form button {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.register-form button:hover {
+  background-color: #0d470d; /* Un verde más oscuro */
+}
+
+/* Responsividad en pantallas pequeñas */
+@media (max-width: 768px) {
+  .register-content {
+    flex-direction: column; /* Apilamos la imagen y el formulario en pantallas pequeñas */
+  }
+
+  .register-image {
+    width: 100%; /* Imagen toma todo el ancho */
+    margin-right: 0; /* Quitamos el margen en pantallas pequeñas */
+    margin-bottom: 20px; /* Espacio entre la imagen y el formulario */
+  }
+
+  .register-form {
+    width: 90%; /* Formulario toma casi todo el ancho en pantallas pequeñas */
+  }
+}
+
+
+/* Footer */
+.footer {
+  background-color: #1c3926; 
+  padding: 40px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+.footer a img {
+  width: 25px;
+  margin: 0 10px;
+}
+
+/* Servicios de Viaje */
+.services {
+  text-align: center;
+  padding: 60px;
+  background-color: #1c3926;  /* Azul más claro */
+  color: rgb(255, 255, 255);
+}
+
+.services-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.services img {
+  width: 40%;
+  border-radius: 10px;
+}
+
+.services-text {
+  max-width: 50%;
+  text-align: left;
+}
+
+/* Animación en el botón "Únete" */
+.animate-btn {
+  transition: all 0.3s ease;
+}
+
+.animate-btn:hover {
+  background-color: green;
+  color: white;
+}
+
+/* Botones "Más información" con bordes redondeados */
+.btn-info {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #1c3926; /* Verde */
+  border: 2px solid #1c3926; /* Borde del mismo color */
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  border-radius: 25px; /* Bordes redondeados */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Cambio de color al pasar el ratón */
+.btn-info:hover {
+  background-color: white;
+  color: #1c3926; /* Letras verdes */
+  border: 2px solid #1c3926; /* Borde verde */
+}
+
+/* Imágenes de los tours redondeadas */
+.tour-card img {
+  width: 100%;
+  border-radius: 15px; /* Bordes redondeados */
+  transition: transform 0.3s ease;
+}
+
+/* Pequeño efecto de zoom al pasar el ratón */
+.tour-card img:hover {
+  transform: scale(1.05);
+}
+/* Responsividad en pantallas pequeñas */
+@media (max-width: 768px) {
+  /* En pantallas pequeñas, la lista de navegación se convierte en columna */
+  .nav-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .register {
+    width: 90%;
+    padding: 40px;
+  }
+
+  .register img {
+    max-width: 100%;
+  }
+
+  /* Añadir un pequeño espaciado entre el logo y las opciones */
+  .header {
+    padding: 10px 15px; /* Reduce el padding del menú en pantallas pequeñas */
+  }
+
+  .nav-list {
+    display: none; /* Inicialmente ocultamos el menú en pantallas pequeñas */
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    background-color: #000;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 20px;
+  }
+
+  .nav-list.active {
+    display: flex; /* Mostrar el menú cuando se active */
+  }
+
+  /* Hacer visible el icono del menú hamburguesa */
+  .menu-toggle {
+    display: flex; 
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+  }
+}

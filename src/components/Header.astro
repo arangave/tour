@@ -1,9 +1,20 @@
+---
+// No es necesario importar nada aquí
+---
+
 <header class="header">
   <div class="container">
     <h1 class="logo">🌍 Travel Explorer</h1>
+    
+    <button class="menu-toggle" aria-label="Abrir menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <nav>
       <ul class="nav-list">
-        <li><a href="/">Inicio</a></li> <!-- Botón para volver a la página principal -->
+        <li><a href="/">Inicio</a></li>
         <li><a href="#tours">Tours</a></li>
         <li><a href="#footer">Contacto</a></li>
         <li><a href="/registro" class="btn-info">Regístrate</a></li>
@@ -12,6 +23,16 @@
   </div>
 </header>
 
+<!-- Script en Astro -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navList = document.querySelector(".nav-list");
 
-
-
+  if (menuToggle && navList) {
+    menuToggle.addEventListener("click", function () {
+      navList.classList.toggle("active");
+    });
+  }
+});
+</script>

@@ -12,7 +12,7 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5; /* Manteniendo el fondo claro */
+  background-color: #3499e7;  /* Manteniendo el fondo claro */
   overflow-x: hidden;
 }
 
@@ -22,7 +22,7 @@ p {
 
 /* Menú fijo sin transparencia */
 .header {
-  background-color: #000000; /* Color negro */
+  background-color: #000000;  /* Color negro */
   position: fixed;
   top: 0;
   width: 100%;
@@ -145,7 +145,7 @@ body {
 .hero h1 {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #1c3926;  /* Verde para el título */
+  color: #3499e7;   /* Verde para el título */
 }
 
 .hero p {
@@ -156,7 +156,7 @@ body {
   display: inline-block;
   padding: 10px 20px;
   background-color: transparent;
-  border: 2px solid #1c3926; 
+  border: 2px solid #3499e7; 
   text-decoration: none;
   font-weight: bold;
   color: rgb(0, 0, 0);
@@ -164,7 +164,7 @@ body {
 }
 
 .hero .btn:hover {
-  background-color: #1c3926; 
+  background-color: #3499e7; 
   color: white;
 }
 
@@ -173,7 +173,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 30px;
-  background-color: #1c3926;
+  background-color: #3499e7; 
   padding: 20px;
   color: white;
   position: relative;
@@ -212,8 +212,8 @@ body {
 
 /* Testimonial Section */
 .testimonial {
-  background-color: #1c3926;   /* Azul más claro */
-  color: rgb(255, 255, 255);
+  background-color: #ffffff;   /* Azul más claro */
+  color: rgb(0, 0, 0);
   padding: 40px;
   text-align: center;
 }
@@ -284,14 +284,14 @@ body {
   padding: 8px;
   width: 100%;
   margin: 5px 0 15px 0;
-  border: 1px solid rgb(19, 100, 10);
+  border: 1px solid #3499e7; 
   border-radius: 5px;
   display: block;
 }
 
 .register-form button {
   padding: 10px 20px;
-  background-color: green;
+  background-color: #3499e7; 
   color: white;
   border: none;
   cursor: pointer;
@@ -299,7 +299,7 @@ body {
 }
 
 .register-form button:hover {
-  background-color: #0d470d;
+  background-color: #020202;
 }
 
 /* Responsividad en pantallas pequeñas */
@@ -329,7 +329,7 @@ body {
 
 /* Footer */
 .footer {
-  background-color: #1c3926; 
+  background-color: #3499e7; 
   padding: 40px;
   text-align: center;
 }
@@ -349,7 +349,7 @@ body {
 .services {
   text-align: center;
   padding: 60px;
-  background-color: #1c3926;  /* Azul más claro */
+  background-color: #384454;   /* Azul más claro */
   color: rgb(255, 255, 255);
 }
 
@@ -376,7 +376,7 @@ body {
 }
 
 .animate-btn:hover {
-  background-color: green;
+  background-color: #3499e7; 
   color: white;
 }
 
@@ -384,8 +384,8 @@ body {
 .btn-info {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #1c3926; /* Verde */
-  border: 2px solid #1c3926; /* Borde del mismo color */
+  background-color: #283c4b;  /* Verde */
+  border: 2px solid #3499e7;  /* Borde del mismo color */
   text-decoration: none;
   font-weight: bold;
   color: white;
@@ -397,8 +397,8 @@ body {
 /* Cambio de color al pasar el ratón */
 .btn-info:hover {
   background-color: white;
-  color: #1c3926; /* Letras verdes */
-  border: 2px solid #1c3926; /* Borde verde */
+  color: #152e4b; /* Letras verdes */
+  border: 2px solid #1a1943; /* Borde verde */
 }
 
 /* Imágenes de los tours redondeadas */
